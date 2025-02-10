@@ -212,8 +212,8 @@
             { title: "Current Time", info: "2:25 PM." },
             { title: "Address of Origin", info: "870 California Ave, Palo Alto, CA 94306." },
             { title: "Address of Destination", info: "290 S 7th St, San Jose, CA 95112." },
-            { title: "Distance to Destination", info: "" },
-            { title: "Estimated Time to Destination", info: "" },
+            { title: "Distance to Destination", info: "21.82 miles." },
+            { title: "Estimated Time to Destination", info: "29 minutes." },
             { title: "State of Charge of Battery", info: "37% charge." },
             { title: "Range of Current Battery", info: "111 minutes." },
             { title: "Estimated Drive Distance with Current Charge", info: "83 miles." },
@@ -231,10 +231,10 @@
                 name: 'CaaStle Inc.',
 
                 location: '189 N Bernardo Ave Suite 250, Mountain View, CA 94043, USA',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '13.42',
+                originTime: '23',
+                destDistance: '6.84',
+                destTime: '16',
 
                 waitTime: [
                         { type: 'J1772', value: '0' }
@@ -270,10 +270,10 @@
                 name: 'Ramada Sunnyvale/Silicon Valley',
 
                 location: '1217 Wildwood Ave, Sunnyvale, CA 94089, USA',
-                originDistance: ' Miles',
-                originTime: ' Minutes',
-                destDistance: ' Miles ',
-                destTime: ' Minutes',
+                originDistance: '10.09',
+                originTime: '18',
+                destDistance: '11.68',
+                destTime: '21',
 
                 
                 waitTime: [
@@ -937,8 +937,8 @@
         // Add route time/distance to instructions & update charging station details
         map.on('load', async () => {
             await getRoute(0); // Ensure this is awaited properly
-            await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
-            await updateChargingStationDetails();  // Ensure this is awaited properly
+            // await updateAndDisplayRouteInstructions();  // Ensure this is awaited properly
+            // await updateChargingStationDetails();  // Ensure this is awaited properly
             addChargingStations();  // You might need to re-add stations to reflect updated data
         });
 
